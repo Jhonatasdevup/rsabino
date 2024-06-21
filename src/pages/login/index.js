@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { StyleSheet, Text, TouchableOpacity, Image, Button } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, Image, Button, Linking } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { LinearGradient } from 'expo-linear-gradient';
 import Styles from './styles';
@@ -58,8 +58,11 @@ export default function App({ navigation }) {
 
       {/* <Button title='oi' onPress={() => navigation.navigate('Inicial')}/> */}
 
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => {
+        Linking.openURL('https://wa.me/5511996999164')
+      }}>
       <Text style={Styles.textSemCadastro}>Não tenho cadastro</Text>
+     
       </TouchableOpacity>
       
     </SafeAreaView>
